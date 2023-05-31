@@ -11,78 +11,63 @@ import CoreData
 struct ContentView: View {
     @Environment (\.managedObjectContext) private var viewContext
     var body: some View {
-        TypewriterView(text: "Hello, world!")
-        Text("Welcome to MenuBarLinks")
-            .padding(64)
+        
+        VStack {
+            HStack {
+                VStack {
+                    // Titulo e descricao
+                    Text("Descubra o Espresso!").foregroundColor(.black)
+                        .font(.system(size: 32))
+                        .frame(width: 501).foregroundColor(.blue)
+                    //                    .alignmentGuide(.leading, computeValue: { _ in 50 })
+                    //                    .padding(.leading, 50)
+                    
+                    Text("Nosso Start Boost aumenta sua produtividade com um período de foco inicial antes das atividades. ").foregroundColor(.black)
+                        .font(.system(size: 16))
+                        .frame(width: 245).foregroundColor(.blue)
+                    
+                    Text("Mas lembre-se! O histórico é apagado após 24 horas. ").foregroundColor(.black)
+                        .frame(width: 251).foregroundColor(.blue)
+                        .font(.system(size: 16))
+                    
+                }
+                Spacer()
+                Image("onboardingBackground")
+                    .alignmentGuide(.leading, computeValue: { _ in 50 })
+                    .padding(.trailing, 50)
+                    .padding(.top, 90)
+                
+                
+            }.edgesIgnoringSafeArea(.all)
+            Spacer()
+            HStack {
+                Text("Entenda mais sobre a ciência do Start Boost")
+                    .foregroundColor(.black)
+                
+                Spacer()
+                
+                Button {
+                    print("fechou")
+                } label: {
+                    Text("OK")
+                        .frame(width: 138, height: 44)
+                        .foregroundColor(.white)
+                        .background(Color("brow-0"))
+                        .cornerRadius(4)
+                        .alignmentGuide(.trailing, computeValue: { _ in 50 })
+                        .padding(.trailing, 50)
+                }
+                .buttonStyle(BorderlessButtonStyle())
+                
+                
+            }.padding(24)
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.white)
+        .edgesIgnoringSafeArea(.all)
+        
     }
     
-    //    @FetchRequest(
-    //        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-    //        animation: .default
-    //    )
-    //
-    //    private var items: FetchedResults<Item>
-    //
-    //    var body: some View {
-    //        NavigationView {
-    //            List {
-    //                ForEach(items) { item in
-    //                    NavigationLink {
-    //                        Text ("Item at \(item.timestamp!, formatter: itemFormatter)")
-    //                    } label: {
-    //                        Text (item.timestamp!, formatter: itemFormatter)
-    //                        24
-    //                    }
-    //                    .onDelete(perform: deleteItems)
-    //                    .toolbar {
-    //                        ToolbarItem
-    //                        Button (action: addItem) {
-    //                            Label("Add Item", systemImage: "plus")
-    //                            Text ("Select an item")
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
-    //
-    //    private func addItem() {
-    //        withAnimation {
-    //            let newItem = Item(context: viewContext)
-    //            newItem.timestamp = Date()
-    //
-    //            do {
-    //                try viewContext.save()
-    //            } catch {
-    //                // Replace this implementation with code to handle the error appropriately.
-    //                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping
-    //                // application, although it may be useful during development.
-    //                let nsError = error as NSError
-    //                fatalError ("Unresolved error \(nsError), \(nsError.userInfo)")
-    //            }
-    //        }
-    //    }
-    //
-    //    private func deleteItems(offsets: IndexSet) {
-    //        withAnimation {
-    //            offsets.map{items[$0]}.forEach(viewContext.delete)
-    //            do {
-    //                try viewContext.save()
-    //            } catch {
-    //                // Replace this implementation with code to handle the error appropriately.
-    //                // fatalerror() causes the application to generate a crash log and terminate. You should not use this function in a shipping
-    //                // application, although it may be useful during development.
-    //                let nsError = error as NSError
-    //                fatalError("Unresolved error \(nsError),  \(nsError.userInfo)")
-    //            }
-    //        }
-    //    }
-    //
-    //    private let itemFormatter: DateFormatter = {
-    //        let formatter = DateFormatter()
-    //        formatter.dateStyle = .short
-    //        formatter.timeStyle = .medium
-    //
-    //        return formatter
-    //    }()
-    }
+}
+

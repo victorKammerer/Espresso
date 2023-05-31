@@ -212,8 +212,8 @@ struct TempoView: View {
 
 
 
-struct TempoView_Previews: PreviewProvider {
-    static var previews: some View {
-        TempoView(timeText: "Alo tempo")
-    }
-}
+//struct TempoView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TempoView(timeText: "Alo tempo")
+//    }
+//}
