@@ -46,9 +46,10 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Button {
+                Button(action: {
                     print("fechou")
-                } label: {
+                    
+                }, label: {
                     Text("OK")
                         .frame(width: 138, height: 44)
                         .foregroundColor(.white)
@@ -56,7 +57,7 @@ struct ContentView: View {
                         .cornerRadius(4)
                         .alignmentGuide(.trailing, computeValue: { _ in 50 })
                         .padding(.trailing, 50)
-                }
+                })
                 .buttonStyle(BorderlessButtonStyle())
                 
                 
