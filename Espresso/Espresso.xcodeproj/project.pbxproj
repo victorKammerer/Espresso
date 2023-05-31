@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C72958C2A278519007A25DC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790D62A2781DE00A65007 /* Persistence.swift */; };
+		6C72958E2A27863B007A25DC /* TabButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C72958D2A27863B007A25DC /* TabButtonView.swift */; };
+		6C7295902A27864F007A25DC /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C72958F2A27864F007A25DC /* TasksView.swift */; };
+		6C7295922A278662007A25DC /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7295912A278662007A25DC /* HistoryView.swift */; };
 		6CA790922A2777F600A65007 /* EspressoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790912A2777F600A65007 /* EspressoApp.swift */; };
 		6CA790942A2777F600A65007 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790932A2777F600A65007 /* ContentView.swift */; };
 		6CA790962A2777F700A65007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA790952A2777F700A65007 /* Assets.xcassets */; };
 		6CA790992A2777F700A65007 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA790982A2777F700A65007 /* Preview Assets.xcassets */; };
-		6CA7909B2A2777F700A65007 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7909A2A2777F700A65007 /* Persistence.swift */; };
-		6CA7909E2A2777F700A65007 /* Espresso.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7909C2A2777F700A65007 /* Espresso.xcdatamodeld */; };
+		6CA7909E2A2777F700A65007 /* UserTasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CA7909C2A2777F700A65007 /* UserTasks.xcdatamodeld */; };
 		6CA790A92A2777F800A65007 /* EspressoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790A82A2777F800A65007 /* EspressoTests.swift */; };
 		6CA790B32A2777F800A65007 /* EspressoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790B22A2777F800A65007 /* EspressoUITests.swift */; };
 		6CA790B52A2777F800A65007 /* EspressoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790B42A2777F800A65007 /* EspressoUITestsLaunchTests.swift */; };
+		6CA790C42A27796800A65007 /* TypeWriterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790C32A27796800A65007 /* TypeWriterView.swift */; };
+		6CA790C72A2779F900A65007 /* UserTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790C52A2779F200A65007 /* UserTask+CoreDataClass.swift */; };
+		6CA790C92A277A5600A65007 /* UserTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790C82A277A5600A65007 /* UserTask+CoreDataProperties.swift */; };
+		6CA790CB2A277AAB00A65007 /* PopOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790CA2A277AAB00A65007 /* PopOverView.swift */; };
+		6CA790CD2A277ABC00A65007 /* TempoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790CC2A277ABC00A65007 /* TempoView.swift */; };
+		6CA790D02A277F7500A65007 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790CF2A277F7500A65007 /* AppDelegate.swift */; };
+		6CA790D22A277F8500A65007 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA790D12A277F8500A65007 /* StatusBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C72958D2A27863B007A25DC /* TabButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonView.swift; sourceTree = "<group>"; };
+		6C72958F2A27864F007A25DC /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		6C7295912A278662007A25DC /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		6CA7908E2A2777F600A65007 /* Espresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Espresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA790912A2777F600A65007 /* EspressoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoApp.swift; sourceTree = "<group>"; };
 		6CA790932A2777F600A65007 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6CA790952A2777F700A65007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CA790982A2777F700A65007 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6CA7909A2A2777F700A65007 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6CA7909D2A2777F700A65007 /* Espresso.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Espresso.xcdatamodel; sourceTree = "<group>"; };
 		6CA7909F2A2777F700A65007 /* Espresso.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Espresso.entitlements; sourceTree = "<group>"; };
 		6CA790A42A2777F800A65007 /* EspressoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +61,14 @@
 		6CA790AE2A2777F800A65007 /* EspressoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA790B22A2777F800A65007 /* EspressoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoUITests.swift; sourceTree = "<group>"; };
 		6CA790B42A2777F800A65007 /* EspressoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6CA790C32A27796800A65007 /* TypeWriterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeWriterView.swift; sourceTree = "<group>"; };
+		6CA790C52A2779F200A65007 /* UserTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserTask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6CA790C82A277A5600A65007 /* UserTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6CA790CA2A277AAB00A65007 /* PopOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverView.swift; sourceTree = "<group>"; };
+		6CA790CC2A277ABC00A65007 /* TempoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoView.swift; sourceTree = "<group>"; };
+		6CA790CF2A277F7500A65007 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CA790D12A277F8500A65007 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		6CA790D62A2781DE00A65007 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				6CA790902A2777F600A65007 /* Espresso */,
-				6CA790A72A2777F800A65007 /* EspressoTests */,
+				6CA790CE2A277F5E00A65007 /* MenuBar */,
 				6CA790B12A2777F800A65007 /* EspressoUITests */,
+				6CA790A72A2777F800A65007 /* EspressoTests */,
+				6CA790C22A27795100A65007 /* Components */,
+				6CA790D32A2781AD00A65007 /* CoreData */,
+				6CA790912A2777F600A65007 /* EspressoApp.swift */,
 				6CA7908F2A2777F600A65007 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,12 +123,9 @@
 		6CA790902A2777F600A65007 /* Espresso */ = {
 			isa = PBXGroup;
 			children = (
-				6CA790912A2777F600A65007 /* EspressoApp.swift */,
-				6CA790932A2777F600A65007 /* ContentView.swift */,
+				6CA790C12A27791700A65007 /* Views */,
 				6CA790952A2777F700A65007 /* Assets.xcassets */,
-				6CA7909A2A2777F700A65007 /* Persistence.swift */,
 				6CA7909F2A2777F700A65007 /* Espresso.entitlements */,
-				6CA7909C2A2777F700A65007 /* Espresso.xcdatamodeld */,
 				6CA790972A2777F700A65007 /* Preview Content */,
 			);
 			path = Espresso;
@@ -133,6 +154,47 @@
 				6CA790B42A2777F800A65007 /* EspressoUITestsLaunchTests.swift */,
 			);
 			path = EspressoUITests;
+			sourceTree = "<group>";
+		};
+		6CA790C12A27791700A65007 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CA790932A2777F600A65007 /* ContentView.swift */,
+				6CA790CA2A277AAB00A65007 /* PopOverView.swift */,
+				6CA790CC2A277ABC00A65007 /* TempoView.swift */,
+				6C72958D2A27863B007A25DC /* TabButtonView.swift */,
+				6C72958F2A27864F007A25DC /* TasksView.swift */,
+				6C7295912A278662007A25DC /* HistoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CA790C22A27795100A65007 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6CA790C32A27796800A65007 /* TypeWriterView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6CA790CE2A277F5E00A65007 /* MenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				6CA790CF2A277F7500A65007 /* AppDelegate.swift */,
+				6CA790D12A277F8500A65007 /* StatusBarController.swift */,
+			);
+			path = MenuBar;
+			sourceTree = "<group>";
+		};
+		6CA790D32A2781AD00A65007 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6CA7909C2A2777F700A65007 /* UserTasks.xcdatamodeld */,
+				6CA790D62A2781DE00A65007 /* Persistence.swift */,
+				6CA790C82A277A5600A65007 /* UserTask+CoreDataProperties.swift */,
+				6CA790C52A2779F200A65007 /* UserTask+CoreDataClass.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CA7909B2A2777F700A65007 /* Persistence.swift in Sources */,
-				6CA7909E2A2777F700A65007 /* Espresso.xcdatamodeld in Sources */,
+				6C72958C2A278519007A25DC /* Persistence.swift in Sources */,
+				6C7295922A278662007A25DC /* HistoryView.swift in Sources */,
+				6CA790D02A277F7500A65007 /* AppDelegate.swift in Sources */,
+				6C72958E2A27863B007A25DC /* TabButtonView.swift in Sources */,
+				6C7295902A27864F007A25DC /* TasksView.swift in Sources */,
+				6CA7909E2A2777F700A65007 /* UserTasks.xcdatamodeld in Sources */,
+				6CA790CD2A277ABC00A65007 /* TempoView.swift in Sources */,
+				6CA790D22A277F8500A65007 /* StatusBarController.swift in Sources */,
+				6CA790CB2A277AAB00A65007 /* PopOverView.swift in Sources */,
 				6CA790942A2777F600A65007 /* ContentView.swift in Sources */,
 				6CA790922A2777F600A65007 /* EspressoApp.swift in Sources */,
+				6CA790C42A27796800A65007 /* TypeWriterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +356,8 @@
 			files = (
 				6CA790B52A2777F800A65007 /* EspressoUITestsLaunchTests.swift in Sources */,
 				6CA790B32A2777F800A65007 /* EspressoUITests.swift in Sources */,
+				6CA790C72A2779F900A65007 /* UserTask+CoreDataClass.swift in Sources */,
+				6CA790C92A277A5600A65007 /* UserTask+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +504,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +532,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,13 +660,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6CA7909C2A2777F700A65007 /* Espresso.xcdatamodeld */ = {
+		6CA7909C2A2777F700A65007 /* UserTasks.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				6CA7909D2A2777F700A65007 /* Espresso.xcdatamodel */,
 			);
 			currentVersion = 6CA7909D2A2777F700A65007 /* Espresso.xcdatamodel */;
-			path = Espresso.xcdatamodeld;
+			path = UserTasks.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

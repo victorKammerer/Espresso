@@ -8,9 +8,10 @@
 import SwiftUI
 
 @main
-struct EspressoApp: App {
+struct Espresso: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
