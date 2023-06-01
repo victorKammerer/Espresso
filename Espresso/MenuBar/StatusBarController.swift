@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import SwiftUI
 
 class StatusBarController {
     private var statusBar: NSStatusBar
@@ -22,6 +23,7 @@ class StatusBarController {
             button.image = NSImage(systemSymbolName: "mug", accessibilityDescription: nil)
             button.action = #selector(showApp(sender: ))
             button.target = self
+            
         }
     }
     

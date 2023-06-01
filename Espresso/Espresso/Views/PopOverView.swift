@@ -6,61 +6,53 @@
 //
 
 import SwiftUI
-import UserNotifications
 
 struct PopoverView: View {
-    @Environment(\.managedObjectContext) var viewContext
+
+    @State var currentTab = "My tasks"
+    @State private var isTasksViewVisible = true
+    @State private var isHistoryViewVisible = false
     
-    @FetchRequest(sortDescriptors: [])
-    var tasks: FetchedResults<UserTask>
-    
-    @State private var taskTitle: String = ""
-    @State private var taskTime: Int = 0
-    @State private var taskStatus: String = "notStarted"
-    
-    @State private var textInput: String = ""
-    @State private var inputList: [String] = []
-    @State private var isTimerViewVisible = false
     
     var body: some View {
-        VStack {
-            
-            VStack {
-                TextField("Digite aqui", text: $textInput)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .onSubmit {
-                        addItemToList()
-                    }
+        VStack{
+            HStack{
+                
+                TabButtonView(image: "checklist", title: "My tasks", currentTab: $currentTab, action: {
+                    isTasksViewVisible = true
+                    isHistoryViewVisible = false
+                })
+
+                TabButtonView(image: "clock.fill", title: "History", currentTab: $currentTab, action: {
+                    isTasksViewVisible = false
+                    isHistoryViewVisible = true
+                })
             }
+            .padding(.top)
             
-            
-            VStack(spacing: 50) {
-                HStack {
-                    List(inputList, id: \.self) { input in
-                        HStack {
-                            
-                            TempoView(timeText: input)
-                        }
-                        .listRowBackground(Color.cyan) // Altere a cor de fundo da célula
-                        .frame(height: 87)
-                        
-                    }
-                    
-                    Spacer()
-                    
-                }
+            Spacer(minLength: 20)
+
+            if isTasksViewVisible {
+
+                TasksView()
+
+            } else if isHistoryViewVisible {
+                
+                HistoryView()
+                
             }
+         
+        }
+        .padding(.all)
+        .background(.white)
+    }
+}
+
+
+extension NSPopover {
+    func setContentSize(_ size: CGSize) {
+        if let viewController = contentViewController {
+            viewController.preferredContentSize = size
         }
     }
-    
-    private func addItemToList() {
-        if !textInput.isEmpty {
-            inputList.append(textInput)
-            textInput = ""
-            isTimerViewVisible = true
-        }
-    }
-    
-    
 }

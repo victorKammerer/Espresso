@@ -40,18 +40,18 @@ struct TabButtonView: View {
                                 
                             }
                     }
-                    .frame(width: 213, height: 56)
+                    .frame(width: .infinity, height: 56)
                     .background(
                         
                         ZStack{
                             if currentTab == title{
                                 Rectangle()
                                     .fill(Color.white)
-                                    .frame(width: 213, height: 56)
+                                    .frame(width: .infinity, height: 56)
                             } else {
                                 Rectangle()
                                     .fill(Color.gray)
-                                    .frame(width: 213, height: 56)
+                                    .frame(width: .infinity, height: 56)
                             }
                         }
                     
@@ -59,7 +59,7 @@ struct TabButtonView: View {
                     
                     Rectangle()
                         .foregroundColor(currentTab == title ? .black : .white)
-                        .frame(width: 213, height: 3)
+                        .frame(width: .infinity, height: 3)
                     
                 }
                 

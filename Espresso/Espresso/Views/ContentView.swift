@@ -15,6 +15,12 @@ struct ContentView: View {
         VStack {
             HStack {
                 VStack {
+                    
+//                    Text("oiii")
+//                        .font(.custom(FontsManager.IBM.medium, size: 16))
+                    
+                    
+                    
                     // Titulo e descricao
                     Text("Descubra o Espresso!").foregroundColor(.black)
                         .font(.system(size: 32))
@@ -69,6 +75,8 @@ struct ContentView: View {
         .edgesIgnoringSafeArea(.all)
         
     }
+    
+    
     
 }
 
