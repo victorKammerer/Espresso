@@ -9,7 +9,7 @@ import SwiftUI
 import UserNotifications
 
 struct TempoView: View {
-    let timeOptions = [1, 10, 15] // Opções de tempo em minutos
+    let timeOptions = [1, 10, 15]
     
     @State private var timeRemaining = 600 // 10 minutos em segundos
     @State private var isTimerRunning = false
@@ -119,8 +119,6 @@ struct TempoView: View {
                 }
                 .cornerRadius(8)
                 
-                // criar funcao para que quando acabe o tempo ele assuma uma nova roupagem que nao e o start bosst
-                //quando clicar em concluir ele vai assumir essa nova funao e se tornar cronometro
                 
                 HStack {
                     
@@ -210,10 +208,3 @@ struct TempoView: View {
     }
 }
 
-
-
-//struct TempoView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TempoView(timeText: "Alo tempo")
-//    }
-//}

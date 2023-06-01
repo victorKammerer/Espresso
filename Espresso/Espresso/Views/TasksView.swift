@@ -1,8 +1,8 @@
 //
-//  TasksView.swift
-//  Macarronada
+//  SwiftUIView.swift
+//  Espresso
 //
-//  Created by michellyes on 29/05/23.
+//  Created by Danielly Santos Lopes da Silva on 31/05/23.
 //
 
 import SwiftUI
@@ -14,46 +14,60 @@ struct TasksView: View {
     var tasks: FetchedResults<UserTask>
     
     @State private var taskTitle: String = ""
-    @State private var taskTime: Int64 = 0
-
+    @State private var taskTime: Int = 0
+    @State private var taskStatus: String = "notStarted"
+    
+    @State private var textInput: String = ""
+    @State private var inputList: [String] = []
+    @State private var isTimerViewVisible = false
+    
+    
     var body: some View {
-        
-        TextField("Digite aqui", text: $taskTitle)
-        HStack{
-            Button("Cancelar"){
-                NSApplication.shared.terminate(nil)
+        VStack {
+            
+            VStack {
+                TextField("Digite aqui", text: $textInput)
+                    .textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(.black).background(.gray)
+                    .padding()
+                    .onSubmit {
+                        addItemToList()
+                    }
             }
-            Spacer()
-            Button("Salvar"){
-                if !taskTitle.isEmpty{
-                    let userTask = UserTask(context: viewContext)
-                    userTask.id = UUID()
-                    userTask.title = taskTitle
-                    userTask.time = taskTime
-                    
-                    try? viewContext.save()
-                    
-                    taskTitle = ""
-                    taskTime = 0
+            
+            
+            
+            
+            List(inputList, id: \.self) { input in
+                HStack {
+                    TempoView(timeText: input)
                 }
-            }.buttonStyle(.borderedProminent)
+                .listRowBackground(Color.cyan) // Altere a cor de fundo da célula
+                .frame(height: 87)
+                
+            }
+            
+            
         }
-        Divider()
-            .padding(.vertical, 4)
-//        ForEach(tasks, id: \.wrappedID){ task in
-//            HStack{
-//                Text("\(task.wrappedTitle)")
-//                Spacer()
-//                Text("\(task.wrappedTime)")
-//                Button{
-//                    print("Clique detectado\n")
-//
-//                    AppDelegate.popover.performClose(nil)
-//                } label: {
-//                    Image(systemName: "hourglass")
-//                }
-//            }
-//        }
+    }
+    
+    private func addItemToList() {
+        if !textInput.isEmpty {
+            inputList.append(textInput)
+            textInput = ""
+            isTimerViewVisible = true
+        }
+    }
+    
+    
+}
+
+extension NSTableView {
+    open override func viewDidMoveToWindow() {
+        super.viewDidMoveToWindow()
         
+        backgroundColor = NSColor.clear
+        if let esv = enclosingScrollView {
+            esv.drawsBackground = false
+        }
     }
 }
