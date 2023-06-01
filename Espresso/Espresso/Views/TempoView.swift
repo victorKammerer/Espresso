@@ -64,14 +64,14 @@ struct TempoView: View {
         VStack(alignment: .leading) {
             
             HStack {
-                Text("oii")
-                    .frame(width: 30, height: 10)
+                Text("oiiiiiiiii")
+                    .frame(width: 60, height: 60)
                 
                 Button(action: {
                     showTimeOptions  = true
                     NotificationManager.instance.requestAuthorization()
                     NotificationManager.instance.scheduleNotification()
-
+                    
                 }) {
                     Image(systemName: "clock")
                     
@@ -81,18 +81,18 @@ struct TempoView: View {
                         .background(Color.black)
                         .padding()
                 }
-             
                 
-            }.frame(width: 20, height: 20)
+                
+            }.frame(width: 325, height: 29)
                 .background(Color.blue)
             
             HStack {
                 
                 ZStack {
-                    Rectangle().foregroundColor(.red)
+                    Rectangle().foregroundColor(Color("White-0"))
                     VStack(alignment: .leading) {
                         ZStack {
-                            Rectangle()
+       
                             HStack {
                                 Text(timeText)
                                     .foregroundColor(.black)
@@ -104,10 +104,10 @@ struct TempoView: View {
                                     .font(.system(size: 14))
                                     .foregroundColor(.black)
                                 
-                                //.buttonStyle(BorderlessButtonStyle())
+                                // .buttonStyle(BorderlessButtonStyle())
                                 
                             }.padding(4)
-                            
+                            //Rectangle().foregroundColor(Color("White-0"))
                         }
                         
                         HStack {

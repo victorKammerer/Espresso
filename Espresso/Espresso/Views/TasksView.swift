@@ -34,14 +34,11 @@ struct TasksView: View {
                     }
             }
             
-            
-            
-            
             List(inputList, id: \.self) { input in
                 HStack {
                     TempoView(timeText: input)
                 }
-                .listRowBackground(Color.cyan) // Altere a cor de fundo da célula
+                // .listRowBackground(Color.cyan) // Altere a cor de fundo da célula
                 .frame(height: 87)
                 
             }
