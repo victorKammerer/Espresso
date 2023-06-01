@@ -14,8 +14,12 @@ struct Espresso: App {
     
     var body: some Scene {
         WindowGroup {
+            
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+            
+            
+            
+        }.windowResizability(WindowResizability.contentMinSize).defaultSize(width: 680, height: 488)
     }
 }
